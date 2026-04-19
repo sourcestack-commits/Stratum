@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/niclas3640/tauri-schema/main/v2.1.1.json",
+  "productName": "CadVisor",
+  "version": "0.0.0",
+  "identifier": "com.cadvisor.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:3002",
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "CadVisor",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ]
+  }
+}

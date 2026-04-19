@@ -1,0 +1,34 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { {{pascalCase name}} } from "./{{dashCase name}}";
+
+const meta: Meta<typeof {{pascalCase name}}> = {
+  title: "{{type}}/{{pascalCase name}}",
+  component: {{pascalCase name}},
+  tags: ["autodocs"],
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["default", "secondary"],
+    },
+    size: {
+      control: "select",
+      options: ["default", "sm", "lg"],
+    },
+  },
+};
+
+export default meta;
+type Story = StoryObj<typeof {{pascalCase name}}>;
+
+export const Default: Story = {
+  args: {
+    children: "{{pascalCase name}}",
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: "{{pascalCase name}}",
+    variant: "secondary",
+  },
+};

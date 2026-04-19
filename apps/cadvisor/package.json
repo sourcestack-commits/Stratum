@@ -1,0 +1,44 @@
+{
+  "name": "@repo/cadvisor",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@repo/config": "workspace:*",
+    "@repo/mock-api": "workspace:*",
+    "@repo/core": "workspace:*",
+    "@repo/design-system": "workspace:*",
+    "@repo/error-handling": "workspace:*",
+    "@repo/feature-auth": "workspace:*",
+    "@repo/feature-cad": "workspace:*",
+    "@repo/feature-dashboard": "workspace:*",
+    "@repo/feature-settings": "workspace:*",
+    "@repo/observability": "workspace:*",
+    "@repo/registry": "workspace:*",
+    "@repo/services": "workspace:*",
+    "@repo/store": "workspace:*",
+    "@repo/tokens": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-router-dom": "^7.13.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "vite": "^6.0.0"
+  }
+}

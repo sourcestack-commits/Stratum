@@ -1,0 +1,22 @@
+{
+  "name": "@repo/feature-cad",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@repo/design-system": "workspace:*",
+    "@repo/store": "workspace:*",
+    "@repo/core": "workspace:*",
+    "@repo/services": "workspace:*",
+    "@repo/config": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "@tanstack/react-query": "^5.62.0",
+    "react": "^18.3.0"
+  }
+}

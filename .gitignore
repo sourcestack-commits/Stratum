@@ -1,0 +1,14 @@
+node_modules
+dist
+.turbo
+.DS_Store
+*.tsbuildinfo
+
+# Environment files
+*.local
+.env
+.env.local
+!.env.example
+!.env.local.example
+!.env.demo
+!.env.prod

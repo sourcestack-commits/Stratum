@@ -1,0 +1,45 @@
+{
+  "effortLevel": "high",
+  "permissions": {
+    "allow": [
+      "Bash(pnpm *)",
+      "Bash(pnpm turbo *)",
+      "Bash(npx *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(ls *)",
+      "Bash(mkdir *)",
+      "Bash(rm -rf dist)",
+      "Bash(rm -rf .turbo)",
+      "Bash(find *)",
+      "Bash(wc *)",
+      "Bash(cat *)"
+    ],
+    "deny": [
+      "Bash(rm -rf node_modules)",
+      "Bash(rm -rf packages)",
+      "Bash(rm -rf apps)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}

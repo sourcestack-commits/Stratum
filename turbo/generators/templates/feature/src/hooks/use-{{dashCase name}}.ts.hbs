@@ -1,0 +1,19 @@
+// Hook for {{pascalCase name}} feature
+// Example:
+//
+// import { useQuery } from "@tanstack/react-query";
+// import { useServices } from "@repo/services";
+//
+// export function use{{pascalCase name}}() {
+//   const services = useServices();
+//   return useQuery({
+//     queryKey: ["{{dashCase name}}"],
+//     queryFn: () => services.{{camelCase name}}.getData(),
+//   });
+// }
+
+export function use{{pascalCase name}}() {
+  return {
+    // Add your hook logic here
+  };
+}

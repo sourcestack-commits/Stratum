@@ -1,0 +1,18 @@
+{
+  "name": "@repo/{{name}}",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@repo/types": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "@repo/tokens": "workspace:*",
+    "react": "^18.3.0",
+    "class-variance-authority": "^0.7.0"
+  }
+}
